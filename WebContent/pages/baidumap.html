@@ -1,0 +1,185 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>Hello, World</title>  
+<style type="text/css">  
+html{height:100%}  
+body{height:100%;margin:0px;padding:0px}  
+#container{height:100%}  
+</style>  
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nHauxVjU6fUVBR31PBFY5b2lrEdD1v1Z">
+//v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+//v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
+</script>
+</head>  
+ 
+<body>  
+<div id="container"></div> 
+	<script type="text/javascript"> 
+		var map = new BMap.Map("container");          // 创建地图实例  
+		var point = new BMap.Point(121.486181 , 31.270203);  // 创建点坐标  
+
+
+	map.addControl(new BMap.NavigationControl());    
+	map.addControl(new BMap.ScaleControl());    
+	map.addControl(new BMap.OverviewMapControl());    
+	map.addControl(new BMap.MapTypeControl());    
+	map.setCurrentCity("北京");  
+
+/**
+
+// 定义一个控件类，即function    
+function ZoomControl(){    
+    // 设置默认停靠位置和偏移量  
+    this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;    
+    this.defaultOffset = new BMap.Size(10, 10);    
+}    
+// 通过JavaScript的prototype属性继承于BMap.Control   
+ZoomControl.prototype = new BMap.Control();
+	// 自定义控件必须实现initialize方法，并且将控件的DOM元素返回   
+// 在本方法中创建个div元素作为控件的容器，并将其添加到地图容器中   
+ZoomControl.prototype.initialize = function(map){    
+// 创建一个DOM元素   
+ var div = document.createElement("div");    
+// 添加文字说明    
+ div.appendChild(document.createTextNode("放大2级"));    
+ // 设置样式    
+ div.style.cursor = "pointer";    
+ div.style.border = "1px solid gray";    
+ div.style.backgroundColor = "white";    
+ // 绑定事件，点击一次放大两级    
+ div.onclick = function(e){  
+  map.zoomTo(map.getZoom() + 1);    
+ }    
+ // 添加DOM元素到地图中   
+ map.getContainer().appendChild(div);    
+ // 将DOM元素返回  
+ return div;    
+ }
+ var myZoomCtrl = new ZoomControl();
+ map.addControl(myZoomCtrl);
+*/
+
+	
+		map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别  
+		var marker0 = new BMap.Marker(new BMap.Point(121.486181 , 31.270203)); // A001
+		map.addOverlay(marker0);
+		var label0 = new BMap.Label("A001",{offset:new BMap.Size(20,-10)});
+		marker0.setLabel(label0);
+		
+		var marker1 = new BMap.Marker(new BMap.Point(121.491043,	31.279089)); // B0008
+		map.addOverlay(marker1); 
+		var label1 = new BMap.Label("B0008",{offset:new BMap.Size(20,-10)});
+		marker1.setLabel(label1);
+		var marker2 = new BMap.Marker(new BMap.Point(121.49292,	31.266943)); // B0402
+		map.addOverlay(marker2); 
+		var label2= new BMap.Label("B0402",{offset:new BMap.Size(20,-10)});
+		marker2.setLabel(label2);
+		var marker3 = new BMap.Marker(new BMap.Point(121.486732,	31.273441)); // B0753
+		map.addOverlay(marker3); 
+		var label3= new BMap.Label("B0753",{offset:new BMap.Size(20,-10)});
+		marker3.setLabel(label3);
+		var marker4	= new BMap.Marker(new BMap.Point(121.487427,	31.270247)); // B2822
+		map.addOverlay(marker4); 
+		var label4 = new BMap.Label("B2822",{offset:new BMap.Size(20,-10)});
+		marker4.setLabel(label4);
+		var marker5 = new BMap.Marker(new BMap.Point(121.492989,	31.272285)); // B3889
+		map.addOverlay(marker5); 
+		var label5 = new BMap.Label("B3889",{offset:new BMap.Size(20,-10)});
+		marker5.setLabel(label5);
+		var marker6 = new BMap.Marker(new BMap.Point(121.480919,	31.267042)); // B4505
+		map.addOverlay(marker6); 
+		var label6 = new BMap.Label(" B4505",{offset:new BMap.Size(20,-10)});
+		marker6.setLabel(label6);
+		var marker7 = new BMap.Marker(new BMap.Point(121.490929,	31.273355)); // B5403
+		map.addOverlay(marker7); 
+		var label7 = new BMap.Label("B5403",{offset:new BMap.Size(20,-10)});
+		marker7.setLabel(label7);
+		var marker8 = new BMap.Marker(new BMap.Point(121.487686,	31.267748)); // B6721
+		map.addOverlay(marker8); 
+		var label8 = new BMap.Label(" B6721",{offset:new BMap.Size(20,-10)});
+		marker8.setLabel(label8);
+		var marker9 = new BMap.Marker(new BMap.Point(121.488106,	31.27755)); // B7888
+		map.addOverlay(marker9); 
+		var label9 = new BMap.Label("B7888",{offset:new BMap.Size(20,-10)});
+		marker9.setLabel(label9);
+		var marker10 = new BMap.Marker(new BMap.Point(121.490814,	31.267244)); // B8015
+		map.addOverlay(marker10);
+		var label10 = new BMap.Label(" B8015",{offset:new BMap.Size(20,-10)});
+		marker10.setLabel(label10);
+		var marker11 = new BMap.Marker(new BMap.Point(121.493767,	31.26959)); // B8063
+		map.addOverlay(marker11); 
+		var label11  = new BMap.Label("B8063",{offset:new BMap.Size(20,-10)});
+		marker11.setLabel(label11);
+		
+		
+		var polyline1 = new BMap.Polyline([
+		new BMap.Point(121.486181 , 31.270203),
+		new BMap.Point(121.487427,	31.270247)
+		], {strokeColor:"red", strokeWeight:2, strokeOpacity:0.5});   //1
+	
+		
+	
+		var polyline2 = new BMap.Polyline([
+		new BMap.Point(121.486181 , 31.270203),
+		new BMap.Point(121.491043,	31.279089)
+		], {strokeColor:"red", strokeWeight:2, strokeOpacity:0.5});   //2
+		
+		var polyline3 = new BMap.Polyline([
+		new BMap.Point(121.486181 , 31.270203),
+		new BMap.Point(121.480919,	31.267042),
+		new BMap.Point(121.490814,	31.267244),
+		new BMap.Point(121.49292,	31.266943),
+		new BMap.Point(121.486181 , 31.270203)
+		], {strokeColor:"red", strokeWeight:2, strokeOpacity:0.5});   //3
+		
+		var polyline4 = new BMap.Polyline([
+		new BMap.Point(121.486181 , 31.270203),
+		new BMap.Point(121.488106,	31.27755)
+		], {strokeColor:"red", strokeWeight:2, strokeOpacity:0.5});   //4
+		
+		var polyline5 = new BMap.Polyline([
+		new BMap.Point(121.486181 , 31.270203),
+		new BMap.Point(121.487686,	31.267748)
+		], {strokeColor:"red", strokeWeight:2, strokeOpacity:0.5});   //5
+		
+		var polyline6 = new BMap.Polyline([
+		new BMap.Point(121.486181 , 31.270203),
+		new BMap.Point(121.493767,	31.26959),
+		new BMap.Point(121.492989,	31.272285),
+		new BMap.Point(121.486181 , 31.270203)
+		], {strokeColor:"red", strokeWeight:2, strokeOpacity:0.5});   //6
+		
+		var polyline7 = new BMap.Polyline([
+		new BMap.Point(121.486181 , 31.270203),
+		new BMap.Point(121.490929,	31.273355)
+		], {strokeColor:"red", strokeWeight:2, strokeOpacity:0.5});   //7
+		
+		
+		var polyline8 = new BMap.Polyline([
+		new BMap.Point(121.486181 , 31.270203),
+		new BMap.Point(121.486732,	31.273441)
+		], {strokeColor:"red", strokeWeight:2, strokeOpacity:0.5});   //8
+	
+	
+	
+		map.addOverlay(polyline1); 
+		map.addOverlay(polyline2); 
+		map.addOverlay(polyline3); 
+		map.addOverlay(polyline4); 
+		map.addOverlay(polyline5); 
+		map.addOverlay(polyline6); 
+		map.addOverlay(polyline7); 
+		map.addOverlay(polyline8); 
+	
+	
+	
+	
+	 
+	
+	
+	</script>  
+</body>  
+</html>

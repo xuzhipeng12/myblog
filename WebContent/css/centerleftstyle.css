@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+aside.NavSidebar
+{ 
+  padding: 1px 8px 1px 8px;
+  width: 20%;
+  font-size: small;
+  float: left;
+}
+ 
+aside.NavSidebar h2 {
+  color: #6B6E3F;
+  border-bottom: thin #6B6E3F solid;
+  margin-bottom: 1	px;
+  margin-top: 2%;
+}
+ 
+aside.NavSidebar ul {
+  padding-left: 2%;
+}
+ 
+aside.NavSidebar li {
+  padding-bottom: 8px;
+}
+#center-left{
+	margin-left: 10px;
+}
+#clear{
+	clear: both;
+}
